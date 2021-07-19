@@ -10,6 +10,9 @@
 #ifndef GLOBALPARAMS_HPP_
 #define GLOBALPARAMS_HPP_
 
+#define PRINT_OUT_COMPILER_EXTENDE
+#define PRINT_OUT_COMPILER
+
 namespace multifaq
 {
     namespace params

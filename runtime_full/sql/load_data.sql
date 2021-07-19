@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS Sales;
+DROP TABLE IF EXISTS Oil;
+DROP TABLE IF EXISTS Holiday;
+DROP TABLE IF EXISTS Transactions;
+DROP TABLE IF EXISTS Stores;
+DROP TABLE IF EXISTS Items;
+CREATE TABLE Sales(date int,store int,item int,unit_sales numeric,onpromotion int);
+\COPY Sales FROM '/Users/yuhao/LMFAO/data/favorita-small/Sales.tbl' DELIMITER '|' CSV;
+CREATE TABLE Oil(date int,oilprize numeric);
+\COPY Oil FROM '/Users/yuhao/LMFAO/data/favorita-small/Oil.tbl' DELIMITER '|' CSV;
+CREATE TABLE Holiday(date int,holiday_type int,locale int,locale_id int,transferred int);
+\COPY Holiday FROM '/Users/yuhao/LMFAO/data/favorita-small/Holiday.tbl' DELIMITER '|' CSV;
+CREATE TABLE Transactions(date int,store int,transactions int);
+\COPY Transactions FROM '/Users/yuhao/LMFAO/data/favorita-small/Transactions.tbl' DELIMITER '|' CSV;
+CREATE TABLE Stores(store int,city int,state int,store_type int,cluster int);
+\COPY Stores FROM '/Users/yuhao/LMFAO/data/favorita-small/Stores.tbl' DELIMITER '|' CSV;
+CREATE TABLE Items(item int,family int,itemclass int,perishable int);
+\COPY Items FROM '/Users/yuhao/LMFAO/data/favorita-small/Items.tbl' DELIMITER '|' CSV;

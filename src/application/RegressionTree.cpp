@@ -1533,7 +1533,9 @@ void RegressionTree::initializeThresholds()
     }
 
     if (DATASET_NAME.compare("favorita") == 0 ||
-        DATASET_NAME.compare("favorita_ml") == 0)
+        DATASET_NAME.compare("favorita-small") == 0 ||
+        DATASET_NAME.compare("favorita_ml") == 0 || 
+        DATASET_NAME.compare("favorita-small-exp") == 0)
     {
         _thresholds = {
             {},// percentiles date
@@ -1554,6 +1556,17 @@ void RegressionTree::initializeThresholds()
             {},// percentiles item_family
             {},// percentiles item_class
             {},// percentiles perishable
+        };   
+    }
+    if (DATASET_NAME.compare("favorita-small-2tbl") == 0)
+    {
+        _thresholds = {
+            {},// percentiles date
+            {},// percentiles store
+            {},// percentiles item
+            {1,2,3,3.114,4,5,6,7,9,11,14,18,29},// percentiles unit_sales
+            {},// percentiles onpromotion
+            {35.36,40.05,43.04,44.47,45.47,46.12,47.17,48.13,49.07,49.85,51.61,53.01,54.59,60.25,90.88,93.84,97.03,100.52,104.06},// percentiles oilprize
         };   
     }
     

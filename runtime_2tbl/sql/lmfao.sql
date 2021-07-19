@@ -1,0 +1,155 @@
+CREATE TABLE view_0 AS
+SELECT date,
+SUM(1) AS agg_0_0
+FROM Oil 
+GROUP BY date;
+
+CREATE TABLE view_1 AS
+SELECT 
+SUM(1*agg_0_0) AS agg_1_0,
+SUM(unit_sales*1*agg_0_0) AS agg_1_1,
+SUM(unit_sales*unit_sales*1*agg_0_0) AS agg_1_2
+FROM Sales NATURAL JOIN view_0 ;
+
+CREATE TABLE view_2 AS
+SELECT store,
+SUM(1*agg_0_0) AS agg_2_0,
+SUM(unit_sales*1*agg_0_0) AS agg_2_1,
+SUM(unit_sales*unit_sales*1*agg_0_0) AS agg_2_2
+FROM Sales NATURAL JOIN view_0 
+GROUP BY store;
+
+CREATE TABLE view_3 AS
+SELECT onpromotion,
+SUM(1*agg_0_0) AS agg_3_0,
+SUM(unit_sales*1*agg_0_0) AS agg_3_1,
+SUM(unit_sales*unit_sales*1*agg_0_0) AS agg_3_2
+FROM Sales NATURAL JOIN view_0 
+GROUP BY onpromotion;
+
+CREATE TABLE view_4 AS
+SELECT date,
+SUM(1) AS agg_4_0,
+SUM(unit_sales*1) AS agg_4_1,
+SUM(unit_sales*unit_sales*1) AS agg_4_2
+FROM Sales 
+GROUP BY date;
+
+CREATE TABLE view_5 AS
+SELECT 
+SUM(CASE WHEN oilprize <= 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_0,
+SUM(CASE WHEN oilprize <= 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_1,
+SUM(CASE WHEN oilprize <= 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_2,
+SUM(CASE WHEN oilprize > 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_3,
+SUM(CASE WHEN oilprize > 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_4,
+SUM(CASE WHEN oilprize > 35.360000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_5,
+SUM(CASE WHEN oilprize <= 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_6,
+SUM(CASE WHEN oilprize <= 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_7,
+SUM(CASE WHEN oilprize <= 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_8,
+SUM(CASE WHEN oilprize > 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_9,
+SUM(CASE WHEN oilprize > 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_10,
+SUM(CASE WHEN oilprize > 40.050000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_11,
+SUM(CASE WHEN oilprize <= 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_12,
+SUM(CASE WHEN oilprize <= 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_13,
+SUM(CASE WHEN oilprize <= 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_14,
+SUM(CASE WHEN oilprize > 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_15,
+SUM(CASE WHEN oilprize > 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_16,
+SUM(CASE WHEN oilprize > 43.040000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_17,
+SUM(CASE WHEN oilprize <= 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_18,
+SUM(CASE WHEN oilprize <= 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_19,
+SUM(CASE WHEN oilprize <= 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_20,
+SUM(CASE WHEN oilprize > 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_21,
+SUM(CASE WHEN oilprize > 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_22,
+SUM(CASE WHEN oilprize > 44.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_23,
+SUM(CASE WHEN oilprize <= 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_24,
+SUM(CASE WHEN oilprize <= 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_25,
+SUM(CASE WHEN oilprize <= 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_26,
+SUM(CASE WHEN oilprize > 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_27,
+SUM(CASE WHEN oilprize > 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_28,
+SUM(CASE WHEN oilprize > 45.470000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_29,
+SUM(CASE WHEN oilprize <= 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_30,
+SUM(CASE WHEN oilprize <= 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_31,
+SUM(CASE WHEN oilprize <= 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_32,
+SUM(CASE WHEN oilprize > 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_33,
+SUM(CASE WHEN oilprize > 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_34,
+SUM(CASE WHEN oilprize > 46.120000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_35,
+SUM(CASE WHEN oilprize <= 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_36,
+SUM(CASE WHEN oilprize <= 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_37,
+SUM(CASE WHEN oilprize <= 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_38,
+SUM(CASE WHEN oilprize > 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_39,
+SUM(CASE WHEN oilprize > 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_40,
+SUM(CASE WHEN oilprize > 47.170000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_41,
+SUM(CASE WHEN oilprize <= 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_42,
+SUM(CASE WHEN oilprize <= 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_43,
+SUM(CASE WHEN oilprize <= 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_44,
+SUM(CASE WHEN oilprize > 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_45,
+SUM(CASE WHEN oilprize > 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_46,
+SUM(CASE WHEN oilprize > 48.130000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_47,
+SUM(CASE WHEN oilprize <= 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_48,
+SUM(CASE WHEN oilprize <= 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_49,
+SUM(CASE WHEN oilprize <= 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_50,
+SUM(CASE WHEN oilprize > 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_51,
+SUM(CASE WHEN oilprize > 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_52,
+SUM(CASE WHEN oilprize > 49.070000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_53,
+SUM(CASE WHEN oilprize <= 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_54,
+SUM(CASE WHEN oilprize <= 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_55,
+SUM(CASE WHEN oilprize <= 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_56,
+SUM(CASE WHEN oilprize > 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_57,
+SUM(CASE WHEN oilprize > 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_58,
+SUM(CASE WHEN oilprize > 49.850000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_59,
+SUM(CASE WHEN oilprize <= 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_60,
+SUM(CASE WHEN oilprize <= 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_61,
+SUM(CASE WHEN oilprize <= 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_62,
+SUM(CASE WHEN oilprize > 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_63,
+SUM(CASE WHEN oilprize > 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_64,
+SUM(CASE WHEN oilprize > 51.610000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_65,
+SUM(CASE WHEN oilprize <= 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_66,
+SUM(CASE WHEN oilprize <= 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_67,
+SUM(CASE WHEN oilprize <= 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_68,
+SUM(CASE WHEN oilprize > 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_69,
+SUM(CASE WHEN oilprize > 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_70,
+SUM(CASE WHEN oilprize > 53.010000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_71,
+SUM(CASE WHEN oilprize <= 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_72,
+SUM(CASE WHEN oilprize <= 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_73,
+SUM(CASE WHEN oilprize <= 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_74,
+SUM(CASE WHEN oilprize > 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_75,
+SUM(CASE WHEN oilprize > 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_76,
+SUM(CASE WHEN oilprize > 54.590000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_77,
+SUM(CASE WHEN oilprize <= 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_78,
+SUM(CASE WHEN oilprize <= 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_79,
+SUM(CASE WHEN oilprize <= 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_80,
+SUM(CASE WHEN oilprize > 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_81,
+SUM(CASE WHEN oilprize > 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_82,
+SUM(CASE WHEN oilprize > 60.250000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_83,
+SUM(CASE WHEN oilprize <= 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_84,
+SUM(CASE WHEN oilprize <= 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_85,
+SUM(CASE WHEN oilprize <= 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_86,
+SUM(CASE WHEN oilprize > 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_87,
+SUM(CASE WHEN oilprize > 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_88,
+SUM(CASE WHEN oilprize > 90.880000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_89,
+SUM(CASE WHEN oilprize <= 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_90,
+SUM(CASE WHEN oilprize <= 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_91,
+SUM(CASE WHEN oilprize <= 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_92,
+SUM(CASE WHEN oilprize > 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_93,
+SUM(CASE WHEN oilprize > 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_94,
+SUM(CASE WHEN oilprize > 93.840000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_95,
+SUM(CASE WHEN oilprize <= 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_96,
+SUM(CASE WHEN oilprize <= 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_97,
+SUM(CASE WHEN oilprize <= 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_98,
+SUM(CASE WHEN oilprize > 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_99,
+SUM(CASE WHEN oilprize > 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_100,
+SUM(CASE WHEN oilprize > 97.030000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_101,
+SUM(CASE WHEN oilprize <= 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_102,
+SUM(CASE WHEN oilprize <= 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_103,
+SUM(CASE WHEN oilprize <= 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_104,
+SUM(CASE WHEN oilprize > 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_105,
+SUM(CASE WHEN oilprize > 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_106,
+SUM(CASE WHEN oilprize > 100.520000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_107,
+SUM(CASE WHEN oilprize <= 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_108,
+SUM(CASE WHEN oilprize <= 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_109,
+SUM(CASE WHEN oilprize <= 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_110,
+SUM(CASE WHEN oilprize > 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_0) AS agg_5_111,
+SUM(CASE WHEN oilprize > 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_1) AS agg_5_112,
+SUM(CASE WHEN oilprize > 104.060000 THEN 1.0 ELSE 0.0 END*1*agg_4_2) AS agg_5_113
+FROM Oil NATURAL JOIN view_4 ;
+

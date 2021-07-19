@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="multifaq"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.76.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\;CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\;CMake Files\src\;CMake Files\src\treeDecomposition\;CMake Files\src\compiler\;CMake Files\src\codegen\;CMake Files\src\application\;CMake Files\src\launcher\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/yuhao/LMFAO"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/yuhao/LMFAO"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/yuhao/LMFAO"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multifaq">
+				<Option output="/Users/yuhao/LMFAO/multifaq" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_IOSTREAMS_DYN_LINK"/>
+					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_PROGRAM_OPTIONS_DYN_LINK"/>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 multifaq"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="multifaq/fast">
+				<Option output="/Users/yuhao/LMFAO/multifaq" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_IOSTREAMS_DYN_LINK"/>
+					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
+					<Add option="-DBOOST_PROGRAM_OPTIONS_DYN_LINK"/>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 multifaq/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="treeDecomposition">
+				<Option output="/Users/yuhao/LMFAO/src/treeDecomposition/libtreeDecomposition.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/treeDecomposition"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 treeDecomposition"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="treeDecomposition/fast">
+				<Option output="/Users/yuhao/LMFAO/src/treeDecomposition/libtreeDecomposition.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/treeDecomposition"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 treeDecomposition/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/treeDecomposition/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compiler">
+				<Option output="/Users/yuhao/LMFAO/src/compiler/libcompiler.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/compiler"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 compiler"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="compiler/fast">
+				<Option output="/Users/yuhao/LMFAO/src/compiler/libcompiler.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/compiler"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 compiler/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codegen">
+				<Option output="/Users/yuhao/LMFAO/src/codegen/libcodegen.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/codegen"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 codegen"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codegen/fast">
+				<Option output="/Users/yuhao/LMFAO/src/codegen/libcodegen.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/codegen"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 codegen/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/codegen/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="application">
+				<Option output="/Users/yuhao/LMFAO/src/application/libapplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 application"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="application/fast">
+				<Option output="/Users/yuhao/LMFAO/src/application/libapplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 application/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="launcher">
+				<Option output="/Users/yuhao/LMFAO/src/launcher/liblauncher.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/launcher"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 launcher"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="launcher/fast">
+				<Option output="/Users/yuhao/LMFAO/src/launcher/liblauncher.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuhao/LMFAO/src/launcher"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/yuhao/LMFAO/include/compiler"/>
+					<Add directory="/Users/yuhao/LMFAO/include/treeDecomposition"/>
+					<Add directory="/Users/yuhao/LMFAO/include/application"/>
+					<Add directory="/Users/yuhao/LMFAO/include/launcher"/>
+					<Add directory="/Users/yuhao/LMFAO/include/templates"/>
+					<Add directory="/Users/yuhao/LMFAO/include/codegen"/>
+					<Add directory="/Users/yuhao/LMFAO/include/utils"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 launcher/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -f &quot;/Users/yuhao/LMFAO/src/launcher/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/yuhao/LMFAO/multiFAQ.cpp">
+			<Option target="multifaq"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/Count.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/CovarianceMatrix.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/DataCube.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/KMeans.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/LinearRegression.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/MutualInformation.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/Percentile.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/RegressionTree.cpp">
+			<Option target="application"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/codegen/CppGenerator.cpp">
+			<Option target="codegen"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/codegen/SqlGenerator.cpp">
+			<Option target="codegen"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/compiler/QueryCompiler.cpp">
+			<Option target="compiler"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/launcher/Launcher.cpp">
+			<Option target="launcher"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/treeDecomposition/TreeDecomposition.cpp">
+			<Option target="treeDecomposition"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/BoostDetectToolset-1.76.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/Boost-1.76.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/Boost-1.76.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Boost-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_headers-1.76.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_headers-1.76.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/libboost_system-variant-mt-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/libboost_system-variant-mt-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_system-1.76.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_system-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/boost_iostreams-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/boost_iostreams-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/libboost_iostreams-variant-mt-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/libboost_iostreams-variant-mt-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/libboost_iostreams-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_iostreams-1.76.0/libboost_iostreams-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_iostreams-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/boost_filesystem-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/boost_filesystem-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/libboost_filesystem-variant-mt-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/libboost_filesystem-variant-mt-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/libboost_filesystem-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_filesystem-1.76.0/libboost_filesystem-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_filesystem-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/boost_program_options-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/boost_program_options-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/libboost_program_options-variant-mt-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/libboost_program_options-variant-mt-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/libboost_program_options-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/../../../usr/local/lib/cmake/boost_program_options-1.76.0/libboost_program_options-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\boost_program_options-1.76.0\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/treeDecomposition/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\treeDecomposition\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/compiler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\compiler\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/codegen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\codegen\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\application\"/>
+		</Unit>
+		<Unit filename="/Users/yuhao/LMFAO/src/launcher/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\launcher\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

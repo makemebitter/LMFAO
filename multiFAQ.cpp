@@ -55,8 +55,8 @@ int main(int argc, char *argv[])
        ("model,m", boost::program_options::value<std::string>()->default_value("covar"),
         "model to be computed: reg, covar (default), ctree, rtree, cube, mi, or perc")
        /* Option for code generator. */
-       // ("codegen,g", boost::program_options::value<std::string>()->default_value("cpp"),
-       //  "open for code generation: cpp (default), or sql")
+       ("codegen,g", boost::program_options::value<std::string>()->default_value("cpp"),
+        "open for code generation: cpp (default), or sql")
        /* Option for directory of generated code. */
        ("out,o",boost::program_options::value<std::string>(),
         "output directory for the generated code, default: runtime/cpp/")

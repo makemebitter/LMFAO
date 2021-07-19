@@ -88,8 +88,9 @@ int Launcher::launch(boost::program_options::variables_map& vm)
     TREEDECOMP_CONF = multifaq::dir::PATH_TO_FILES+"/"+vm["td"].as<std::string>();
 
     const string model = vm["model"].as<std::string>();
+    const string codeGenerator = vm["codegen"].as<std::string>();
     
-    const string codeGenerator = "cpp"; // vm["codegen"].as<std::string>();
+    // const string codeGenerator = "sql"; // vm["codegen"].as<std::string>();
     
     multifaq::cppgen::PARALLELIZATION_TYPE parallelization_type =
         multifaq::cppgen::NO_PARALLELIZATION;

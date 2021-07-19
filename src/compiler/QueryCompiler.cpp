@@ -192,7 +192,7 @@ Function* QueryCompiler::getFunction(size_t f_id)
 pair<size_t,size_t> QueryCompiler::compileViews(TDNode* node, size_t destinationID,
                                    vector<prod_bitset> aggregate, var_bitset freeVars)
 {
-    bool print = false;
+    bool print = true;
     
     /* Check if the required view has already been declared - if so reuse this one */
     cache_tuple t = make_tuple(node->_id, destinationID, aggregate, freeVars);
@@ -209,7 +209,7 @@ pair<size_t,size_t> QueryCompiler::compileViews(TDNode* node, size_t destination
     {
         DINFO("\nBeginning compileViews at node " + to_string(node->_id) + " destination "+
               to_string(destinationID) + " freeVars: " + freeVars.to_string() +
-              " number of products: " + to_string(aggregate.size()) +"\n");
+              " number of products: " + to_string(aggregate.size()) +"\n")
 
         std::string aggString = " ";
         size_t aggIdx = 0;
